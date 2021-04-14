@@ -6,7 +6,7 @@ Code assist is a command line tool which helps you find problems according to yo
 
 ## Features
 
-- Supports AtCoder, Codeforces and CodeChef
+- Supports Spoj, Codeforces and CodeChef
 - Sorts problems according to topics
 - Saves a lot of time
 
@@ -48,7 +48,7 @@ As codeassist uses selenium, you need to have chromedriver in your path.
 | ---------------------------- | ---------------------------------------------------------- |
 | -l or --login                | To login with your id and fetch problems                   |
 | -r or --random               | To get a random unsolved question from a random topic      |
-| -lg or --listgenre           | To list all the available topics which you can choose from |
-| -g [topic number] or --genre | To get a random problem from the selected topic            |
+| -lc or --listcategories           | To list all the available topics which you can choose from |
+| -c [topic number] or --category | To get a random problem from the selected topic            |
 
 Contributions are always welcomed! Thankyou for reading!
