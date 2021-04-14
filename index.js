@@ -16,22 +16,34 @@ const inp = args[2];
 
 // let username = "something";
 
-if (inp == "-l" || inp == "--list") {
+if (inp == "-l" || inp == "--login") {
   q.setusername();
+}
+
+if (inp == "-o" || inp == "--options") {
+  console.log(
+    "-l for login. \n-r for random question. \n-lc for list category. \n-c [category number] for question from that category"
+  );
+  process.exit();
 }
 
 if (inp == "--random" || inp == "-r") {
   q.feedMeQuestion("");
+  process.exit();
 }
 
-if (inp == "-lg" || inp == "--listcategories") {
+if (inp == "-lc" || inp == "--listcategories") {
   q.printCategories();
+  process.exit();
 }
 
-if (inp == "--categories" || inp == "-c") {
+if (inp == "--category" || inp == "-c") {
   if (args.length < 4) {
-    console.log("Please provdie a category. Use -lg flag to list genre".red);
+    console.log("Please provdie a category. Use -lc flag to list category".red);
     process.exit();
   }
   q.feedMeQuestion(args[3]);
+  process.exit();
 }
+
+console.log("Please give valid arguments. Do cpss -o for options".red);

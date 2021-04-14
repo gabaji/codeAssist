@@ -5,8 +5,6 @@ const { RSA_NO_PADDING } = require("constants");
 const readline = require("readline-sync");
 const colors = require("colors");
 
-const url = "https://recommender.codedrills.io/profile?handles=cc%2Fgabaji";
-
 // grab tab pane of practice tab and then for each element, perform the given query
 
 async function write(array, path) {
