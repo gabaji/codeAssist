@@ -120,9 +120,9 @@ async function feedMeQuestion(category) {
   var x = vals[category];
   var keys = Object.keys(x);
   var index = Math.floor(Math.random() * keys.length);
-  console.log(category);
-  console.log(keys[index]);
-  console.log(vals[category][keys[index]]);
+  console.log(category.blue);
+  console.log(keys[index].green);
+  console.log(vals[category][keys[index]].grey);
 }
 
 function checkusername() {

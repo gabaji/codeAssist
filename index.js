@@ -3,6 +3,7 @@
 const q = require("./question");
 const fs = require("fs");
 const colors = require("colors");
+const { headersToString } = require("selenium-webdriver/http");
 
 var args = process.argv;
 
@@ -15,21 +16,21 @@ const inp = args[2];
 
 // let username = "something";
 
-if (inp == "-l") {
+if (inp == "-l" || inp == "--list") {
   q.setusername();
 }
 
-if (inp == "random" || inp == "-r") {
+if (inp == "--random" || inp == "-r") {
   q.feedMeQuestion("");
 }
 
-if (inp == "-lg") {
+if (inp == "-lg" || inp == "--listcategories") {
   q.printCategories();
 }
 
-if (inp == "genre" || inp == "-g") {
+if (inp == "--categories" || inp == "-c") {
   if (args.length < 4) {
-    console.log("Please provdie a genre. Use -lg flag to list genre".red);
+    console.log("Please provdie a category. Use -lg flag to list genre".red);
     process.exit();
   }
   q.feedMeQuestion(args[3]);
